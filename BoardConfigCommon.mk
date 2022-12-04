@@ -16,7 +16,9 @@ TARGET_AMLOGIC_GPU_ARCH := bifrost
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
 ## Kernel
-BOARD_KERNEL_CMDLINE := androidboot.dynamic_partitions=true androidboot.boot_devices=ffe07000.emmc use_uvm=1
+BOARD_KERNEL_CMDLINE := androidboot.dtbo_idx=0 \
+                        root=/dev/mmcblk0p18 \
+                        androidboot.selinux=permissive
 TARGET_KERNEL_CONFIG := g12a_defconfig
 TARGET_KERNEL_SOURCE := kernel/amlogic/linux-4.9
 TARGET_KERNEL_VARIANT_CONFIG ?= g12a_variant_defconfig
@@ -30,6 +32,12 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init-files/fstab.amlogic
 
 ## Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
+
+# System as root
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_ROOT_EXTRA_FOLDERS := bluetooth firmware
+BOARD_SUPPRESS_SECURE_ERASE := true
+TARGET_USES_UEFI := true
 
 ## Vendor SPL
 VENDOR_SECURITY_PATCH := 2021-11-05
