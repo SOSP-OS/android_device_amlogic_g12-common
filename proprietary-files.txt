@@ -12,14 +12,14 @@ product/etc/sysconfig/google_atv.xml
 -product/priv-app/Adt3LauncherCustomization/Adt3LauncherCustomization.apk
 -product/priv-app/Adt3SuwCustomization/Adt3SuwCustomization.apk
 system/etc/permissions/privapp-permissions-google.xml
-system_ext/bin/blur_sysprop_notifier
-system_ext/etc/init/blur_sysprop_notifier.rc
-system_ext/etc/permissions/privapp-permissions-deadpool.xml
-system_ext/etc/permissions/privapp-permissions-google-se.xml
--system_ext/priv-app/DeadpoolServiceBtServices/DeadpoolServiceBtServices.apk
+system/bin/blur_sysprop_notifier
+system/etc/init/blur_sysprop_notifier.rc
+system/etc/permissions/privapp-permissions-deadpool.xml
+system/etc/permissions/privapp-permissions-google-se.xml
+-system/priv-app/DeadpoolServiceBtServices/DeadpoolServiceBtServices.apk
 
 # Audio
-system_ext/bin/param_set
+system/bin/param_set
 vendor/lib/hw/audio.primary.amlogic.so
 vendor/lib/libAmlAudioOutPort.so
 vendor/lib/libamadec.so
@@ -90,10 +90,10 @@ vendor/lib/libvideotunnel.so
 vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so
 
 # Droidlogic
--system_ext/priv-app/droidlogic-res/droidlogic-res.apk
+-system/priv-app/droidlogic-res/droidlogic-res.apk
 -vendor/framework/droidlogic.jar
-system_ext/etc/permissions/droidlogic_permissions.xml
-system_ext/lib/libjniuevent.so
+system/etc/permissions/droidlogic_permissions.xml
+system/lib/libjniuevent.so
 vendor/etc/permissions/droidlogic.software.core.xml
 
 # DRM
@@ -112,8 +112,8 @@ vendor/etc/init/android.hardware.dumpstate@1.1-service.droidlogic.rc
 vendor/lib/libam_adp.so
 
 # Graphics
-system_ext/lib/arm.graphics-V1-ndk_platform.so
-system_ext/lib/libamgralloc_ext.so
+system/lib/arm.graphics-V1-ndk_platform.so
+system/lib/libamgralloc_ext.so
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service.rc
 vendor/etc/mesondisplay.cfg
@@ -175,10 +175,10 @@ vendor/lib/firmware/video/video_ucode.bin
 vendor/lib/libamavutils.so
 
 # Media
-system_ext/lib/libmediahal_mediasync.system.so
-system_ext/lib/libmediahal_resman.system.so
-system_ext/lib/libmediahal_tsplayer.system.so
-system_ext/lib/libmediahal_videodec.system.so
+system/lib/libmediahal_mediasync.system.so
+system/lib/libmediahal_resman.system.so
+system/lib/libmediahal_tsplayer.system.so
+system/lib/libmediahal_videodec.system.so
 vendor/lib/libmediahal_mediasync.so
 vendor/lib/libmediahal_passthrough.so
 vendor/lib/libmediahal_resman.so
@@ -237,7 +237,7 @@ vendor/lib/libge2d.so
 odm/etc/firmware/firmware.le
 odm/etc/tvconfig/pq/pq.db
 odm/etc/tvconfig/pq/pq_default.ini
-system_ext/lib/vendor.amlogic.hardware.systemcontrol@1.0.so
+system/lib/vendor.amlogic.hardware.systemcontrol@1.0.so
 vendor/bin/hdcp_tx22
 vendor/bin/systemcontrol
 vendor/etc/init/systemcontrol.rc
